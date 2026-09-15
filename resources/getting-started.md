@@ -88,7 +88,7 @@ Only one C compiler is required for ordinary use. Having both GCC and Clang is u
 
 ## Get the repository
 
-The repository is private during development, so GitHub may ask you to authenticate.
+The repository is public, so cloning it does not require GitHub authentication.
 
 ```bash
 git clone https://github.com/lundschulze/foundations-in-c.git

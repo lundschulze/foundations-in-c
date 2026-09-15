@@ -10,6 +10,10 @@ Companion code and learning resources for *Foundations in C: From First Programm
 
 The examples favour clear reasoning, explicit code and good habits that transfer to later study of C++ and other programming languages.
 
+## Free preview
+
+Read the illustrated [Free Preview](https://github.com/lundschulze/foundations-in-c/releases/download/v1.0.0/Foundations_in_C_Free_Preview.pdf) for selected chapters and an introduction to the book's example-first approach.
+
 ## What this repository contains
 
 - Runnable examples matching all 23 chapters
@@ -110,7 +114,7 @@ Before opening an issue or pull request, see [CONTRIBUTING.md](CONTRIBUTING.md) 
 
 ## Release preparation
 
-Maintainers should complete the [Release Readiness Checklist](RELEASE_CHECKLIST.md) before changing repository visibility. The checklist covers editorial consistency, licensing, rights, complete-history privacy review, validation and release rehearsal. The latest read-only reviews are recorded in the [Git History Audit](HISTORY_AUDIT.md), [Starter Separation Audit](STARTER_AUDIT.md) and [Sample Data and Privacy Audit](DATA_AUDIT.md).
+Maintainers completed the [Release Readiness Checklist](RELEASE_CHECKLIST.md) before publication. It records editorial consistency, licensing, rights, complete-history privacy review, validation and release rehearsal. The latest read-only reviews are recorded in the [Git History Audit](HISTORY_AUDIT.md), [Starter Separation Audit](STARTER_AUDIT.md) and [Sample Data and Privacy Audit](DATA_AUDIT.md).
 
 ## Publication boundaries
 

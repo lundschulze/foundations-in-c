@@ -1,14 +1,14 @@
 # Release Readiness Checklist
 
-This maintainer checklist must be completed before *Foundations in C* companion repository is made public.
+This maintainer checklist records the checks completed before the *Foundations in C* companion repository was made public.
 
-> **Keep the repository private until every blocking item is complete.** A green build confirms that the code works; it does not by itself confirm that the repository is legally, editorially or operationally ready for publication.
+> **Publication record:** the repository is public. A green build confirms that the code works; it does not by itself replace editorial, legal or operational review.
 
 ## Current verified baseline
 
 Verified against `main` on 13 September 2026:
 
-- [x] The repository is private.
+- [x] The repository is public.
 - [x] All 23 chapter directories are present.
 - [x] Three independent milestone projects are present.
 - [x] Repository-wide GCC, Clang and sanitizer jobs pass.
