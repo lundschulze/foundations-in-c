@@ -1,6 +1,6 @@
 # Foundations in C
 
-Companion code and learning resources for *Foundations in C* by **Filip L. Schulze**.
+Companion code and learning resources for *Foundations in C: A Practical Path from First Programme to Modular Systems* by **Filip L. Schulze**.
 
 > **Release status:** Companion examples and exercises are available for all 23 C17 chapters. Automated GCC, Clang, sanitizer, repository-hygiene and full-history secret validation is active. Three independent milestone projects and the Getting Started, Command Reference and Troubleshooting guides are included.
 
