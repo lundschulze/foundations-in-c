@@ -2,7 +2,7 @@
 
 Companion code and learning resources for *Foundations in C* by **Filip L. Schulze**.
 
-> **Development status:** Companion examples and exercises are available for all 23 C17 chapters. Automated GCC, Clang, sanitizer, repository-hygiene and full-history secret validation is active. Three independent milestone projects and the Getting Started, Command Reference and Troubleshooting guides are available. Editorial, licensing and release review remain in progress while the repository is private.
+> **Release status:** Companion examples and exercises are available for all 23 C17 chapters. Automated GCC, Clang, sanitizer, repository-hygiene and full-history secret validation is active. Three independent milestone projects and the Getting Started, Command Reference and Troubleshooting guides are included.
 
 ## About the book
 
@@ -23,7 +23,7 @@ The examples favour clear reasoning, explicit code and good habits that transfer
 
 The three independent projects in `milestone-projects/` deliberately provide open-ended briefs and starter code rather than official solutions.
 
-The repository mirrors the paths used in the book so that a future public release will not require readers to reorganise downloaded files.
+The repository mirrors the paths used in the book, so readers do not need to reorganise downloaded files.
 
 ## Repository structure
 
@@ -106,7 +106,7 @@ The command uses strict C17 flags including `-Werror`. GitHub Actions runs the s
 
 ## Contributing
 
-During private development, contributions are limited to invited collaborators. See [CONTRIBUTING.md](CONTRIBUTING.md) for reporting, coding, testing and publication-safety requirements.
+Before opening an issue or pull request, see [CONTRIBUTING.md](CONTRIBUTING.md) for reporting, coding, testing and publication-safety requirements.
 
 ## Release preparation
 
