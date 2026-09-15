@@ -2,7 +2,7 @@
 
 Thank you for helping improve the *Foundations in C* companion repository.
 
-During private development, contributions are limited to invited collaborators. These guidelines also define the intended workflow for reader contributions after publication.
+These guidelines define the workflow for reporting problems and proposing changes to the companion material.
 
 ## Before you start
 
