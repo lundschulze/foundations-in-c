@@ -1,0 +1,133 @@
+name: Bug report
+description: Report a reproducible problem in companion code, tests or reader documentation
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem in *Foundations in C*. Complete the fields below with a minimal, reproducible example.
+
+        Do not attach manuscript pages, production PDFs, backups, credentials, private keys or other confidential material.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Select the part of the repository that contains the problem.
+      options:
+        - Chapter example or exercise
+        - Milestone project
+        - Build or test script
+        - GitHub Actions
+        - Reader documentation
+        - Repository structure
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: path
+    attributes:
+      label: Repository path
+      description: Give the exact chapter, example, milestone or resource path.
+      placeholder: chapters/08-repetition-and-loops/example-name
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - macOS Terminal
+        - Windows MSYS2 UCRT64
+        - Linux
+        - GitHub Codespaces
+        - GitHub Actions
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Compiler and Make versions
+      description: Paste the first lines from cc --version and make --version, or write "not applicable".
+      placeholder: Apple clang version ...; GNU Make ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command
+      description: Paste the command that demonstrates the problem.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Minimal input
+      description: Include only non-sensitive input needed to reproduce the problem. Write "none" when no input is required.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Start from a clean checkout or explain any local changes.
+      placeholder: |
+        1. Enter ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: State the output or result you expected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: State what happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Paste the first complete error and the nearby build or test output. Redact sensitive information.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Compiler or CI comparison
+      description: Note whether the problem occurs with GCC, Clang, sanitizers or GitHub Actions. Write "not tested" where appropriate.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety and preparation
+      options:
+        - label: I searched existing issues and read the relevant README and Troubleshooting guide.
+          required: true
+        - label: I reproduced the problem with the smallest practical example.
+          required: true
+        - label: I removed credentials, private keys, personal data, manuscript material and private publishing files.
+          required: true
+        - label: I understand that public contribution and licensing terms must be finalised before outside contributions can be accepted.
+          required: true

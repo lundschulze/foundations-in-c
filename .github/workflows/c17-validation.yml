@@ -1,0 +1,87 @@
+name: C17 validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository-hygiene:
+    name: Repository hygiene
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Reject private and generated files
+        run: ./scripts/check-repository-hygiene.sh
+
+  documentation-links:
+    name: Internal Markdown links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Validate internal links and anchors
+        run: ./scripts/check-markdown-links.py
+
+      - name: Check British-English prose
+        run: ./scripts/check-british-english.py
+
+      - name: Validate Markdown structure and tables
+        run: ./scripts/check-markdown-structure.py
+
+  build-and-test:
+    name: Build and test with ${{ matrix.compiler }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler:
+          - gcc
+          - clang
+
+    env:
+      CC: ${{ matrix.compiler }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Build and test every chapter
+        run: ./scripts/test-all.sh
+
+  release-archive:
+    name: Source archive rehearsal
+    needs: repository-hygiene
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Inspect and test the source archive
+        run: ./scripts/check-release-archive.sh
+
+  sanitizers:
+    name: Address and undefined-behaviour sanitizers
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Build and test with Clang sanitizers
+        run: ./scripts/test-sanitizers.sh

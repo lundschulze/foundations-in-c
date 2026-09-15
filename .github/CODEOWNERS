@@ -1,0 +1,6 @@
+# Default review ownership for repository changes.
+* @Falconize
+
+# Security-sensitive automation and maintenance tooling.
+/.github/ @Falconize
+/scripts/ @Falconize

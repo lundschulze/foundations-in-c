@@ -1,0 +1,88 @@
+# Operating-system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# C build products
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.dSYM/
+build/
+bin/
+
+# Common extensionless example executables
+**/answer
+**/program
+
+# Test and coverage output
+*.gcda
+*.gcno
+*.gcov
+coverage/
+test-results/
+tmp/
+temp/
+
+# Logs
+*.log
+
+# Private manuscript and publishing material
+private/
+manuscript/
+publishing/
+backups/
+dist/
+
+# Private document and archive formats
+*.pdf
+*.doc
+*.docx
+*.pages
+*.odt
+*.epub
+*.mobi
+*.indd
+*.afpub
+*.webarchive
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2
+*.tar.xz
+*.txz
+*.gz
+*.bz2
+*.xz
+*.bak
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python maintenance scripts
+__pycache__/
+*.py[cod]
